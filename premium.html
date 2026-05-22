@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kallisto - Premium Upgrades</title>
+    <title>Kallisto - Premium Upgrade</title>
     <style>
         /* TEMA ÎNTUNECATĂ CORPORATIVĂ */
         :root {
@@ -27,7 +27,7 @@
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1000px; /* Ajustat pentru 2 carduri */
             margin: 0 auto;
             padding: 40px 20px;
             text-align: center;
@@ -53,12 +53,12 @@
         .header p { color: var(--text-muted); font-size: 18px; max-width: 600px; margin: 0 auto 50px auto; }
         .gold-text { color: var(--gold-accent); text-shadow: 0 0 15px var(--gold-glow); }
 
-        /* GRID PREȚURI */
+        /* GRID PREȚURI (Centrat pentru 2 carduri) */
         .pricing-grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 30px;
+            gap: 40px;
             margin-bottom: 80px;
         }
 
@@ -68,8 +68,8 @@
             border: 1px solid var(--border-color);
             border-radius: 16px;
             padding: 40px 30px;
-            flex: 1 1 300px;
-            max-width: 340px;
+            flex: 1 1 350px;
+            max-width: 380px;
             position: relative;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -82,7 +82,7 @@
             border-color: rgba(255, 255, 255, 0.2);
         }
 
-        /* CARD PREMIUM / ELITE (Efect Special) */
+        /* CARD PREMIUM (Efect Special) */
         .card-elite {
             border-color: var(--gold-accent);
             box-shadow: 0 0 30px rgba(255, 215, 0, 0.1);
@@ -104,29 +104,30 @@
             color: #000;
             font-weight: 800;
             font-size: 12px;
-            padding: 5px 15px;
+            padding: 5px 20px;
             border-radius: 20px;
             letter-spacing: 1px;
             text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
         }
 
         /* CONȚINUT CARD */
-        .tier-name { color: #ffffff; font-size: 24px; font-weight: 800; margin-bottom: 10px; }
+        .tier-name { color: #ffffff; font-size: 26px; font-weight: 800; margin-bottom: 10px; }
         .tier-price { color: var(--gold-accent); font-size: 48px; font-weight: 900; margin: 15px 0; font-family: "Fira Code", monospace; }
         .tier-price span { font-size: 16px; color: var(--text-muted); font-weight: normal; }
-        .tier-desc { color: var(--text-muted); font-size: 14px; margin-bottom: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; }
+        .tier-desc { color: var(--text-muted); font-size: 15px; margin-bottom: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; }
         
         /* LISTA BENEFICII */
-        .features-list { list-style: none; padding: 0; margin: 0 0 30px 0; text-align: left; flex-grow: 1; }
-        .features-list li { margin-bottom: 15px; font-size: 15px; color: #ffffff; display: flex; align-items: flex-start; }
-        .check { color: #3fb950; font-weight: bold; margin-right: 10px; font-size: 18px; }
-        .cross { color: #f85149; font-weight: bold; margin-right: 10px; font-size: 18px; opacity: 0.5; }
+        .features-list { list-style: none; padding: 0; margin: 0 0 40px 0; text-align: left; flex-grow: 1; }
+        .features-list li { margin-bottom: 18px; font-size: 16px; color: #ffffff; display: flex; align-items: flex-start; }
+        .check { color: #3fb950; font-weight: bold; margin-right: 12px; font-size: 18px; }
+        .cross { color: #f85149; font-weight: bold; margin-right: 12px; font-size: 18px; opacity: 0.5; }
         
         /* BUTOANE PLATĂ */
         .btn-pay {
             display: block;
             width: 100%;
-            padding: 15px 0;
+            padding: 16px 0;
             border-radius: 8px;
             font-weight: bold;
             font-size: 16px;
@@ -143,7 +144,7 @@
 
         /* SECȚIUNE CUM FUNCȚIONEAZĂ (CLAIM) */
         .how-it-works { background-color: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 40px; margin: 0 auto 50px auto; max-width: 800px; text-align: left; }
-        .how-it-works h2 { color: var(--gold-accent); font-size: 24px; text-align: center; margin-top: 0; margin-bottom: 30px; }
+        .how-it-works h2 { color: var(--gold-accent); font-size: 24px; text-align: center; margin-top: 0; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1px; }
         .step { display: flex; margin-bottom: 25px; align-items: flex-start; }
         .step-number { background-color: var(--bg-tertiary); border: 1px solid var(--gold-accent); color: var(--gold-accent); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 18px; margin-right: 20px; flex-shrink: 0; }
         .step-text h4 { color: #ffffff; margin: 0 0 5px 0; font-size: 18px; }
@@ -179,71 +180,58 @@
         <!-- HEADER -->
         <div class="header">
             <h1>Unlock the <span class="gold-text">Ultimate</span> Architecture</h1>
-            <p>Upgrade to a premium tier to remove limitations, access VIP economy features, and secure priority support for your Discord Guild.</p>
+            <p>Upgrade to Kallisto Premium to remove all constraints, access VIP economy modules, and dominate the digital simulation.</p>
         </div>
 
-        <!-- GRID PREȚURI -->
+        <!-- GRID PREȚURI (ACUM SUNT DOAR 2 CARDURI PERFECT CENTRATE) -->
         <div class="pricing-grid">
             
-            <!-- PACHET 1 (Gratuit) -->
+            <!-- PACHET GRATUIT -->
             <div class="pricing-card">
                 <div class="tier-name">Kallisto Core</div>
-                <div class="tier-price">€0 <span>/ lifetime</span></div>
+                <div class="tier-price">€0 <span>/ forever</span></div>
                 <div class="tier-desc">The standard definitive experience for all Discord communities.</div>
                 <ul class="features-list">
                     <li><span class="check">✓</span> Advanced Economy Modules</li>
                     <li><span class="check">✓</span> Absolute Moderation Logs</li>
                     <li><span class="check">✓</span> Standard Ticket System</li>
                     <li><span class="cross">✕</span> Bank Capacity Overdrive</li>
-                    <li><span class="cross">✕</span> Exclusive Profile Badges</li>
+                    <li><span class="cross">✕</span> Zero Command Cooldowns</li>
+                    <li><span class="cross">✕</span> Elite Developer Support</li>
                 </ul>
                 <a href="https://discord.com/oauth2/authorize?client_id=1507384408037130281&permissions=5066560213739575&integration_type=0&scope=bot+applications.commands" class="btn-pay btn-standard">Add to Server</a>
             </div>
 
-            <!-- PACHET 2 (PREMIUM - GOLD) -->
+            <!-- PACHET PREMIUM SINGULAR (30 ZILE) -->
             <div class="pricing-card card-elite">
-                <div class="popular-badge">Most Popular</div>
-                <div class="tier-name">Kallisto Elite</div>
-                <div class="tier-price">€4.99 <span>/ lifetime</span></div>
-                <div class="tier-desc">Remove all constraints and dominate the virtual simulation.</div>
+                <div class="popular-badge">Kallisto Premium</div>
+                <div class="tier-name">Elite Architecture</div>
+                <!-- PREȚUL MODIFICAT LA 30 DE ZILE -->
+                <div class="tier-price">€3.99 <span>/ 30 Days</span></div>
+                <div class="tier-desc">Remove all limitations. Built for massive communities.</div>
                 <ul class="features-list">
                     <li><span class="check">✓</span> Everything in Core Tier</li>
-                    <li><span class="check">✓</span> Bank Capacity Overdrive (2x)</li>
-                    <li><span class="check">✓</span> Elite Economy Commands</li>
-                    <li><span class="check">✓</span> 50% Command Cooldown Reduction</li>
-                    <li><span class="check">✓</span> Premium Discord Role & Badge</li>
-                </ul>
-                <!-- ÎNLOCUIEȘTE LINK-UL DE MAI JOS CU LINK-UL TĂU DE PAYPAL.ME -->
-                <a href="https://paypal.me/taroxofficial" target="_blank" class="btn-pay btn-gold">Buy with PayPal</a>
-            </div>
-
-            <!-- PACHET 3 (ULTRA) -->
-            <div class="pricing-card">
-                <div class="tier-name">Kallisto Apex</div>
-                <div class="tier-price">€9.99 <span>/ lifetime</span></div>
-                <div class="tier-desc">The absolute pinnacle of Discord server management.</div>
-                <ul class="features-list">
-                    <li><span class="check">✓</span> Everything in Elite Tier</li>
-                    <li><span class="check">✓</span> Infinite Paginator Capacity</li>
-                    <li><span class="check">✓</span> Custom Race Pets (Economy)</li>
+                    <li><span class="check">✓</span> Infinite Paginator & Bank Capacity</li>
+                    <li><span class="check">✓</span> Exclusive Economy Commands</li>
                     <li><span class="check">✓</span> 0% Command Cooldowns</li>
+                    <li><span class="check">✓</span> Premium Discord Role & Badge</li>
                     <li><span class="check">✓</span> Direct Developer Priority Support</li>
                 </ul>
-                <!-- ÎNLOCUIEȘTE LINK-UL DE MAI JOS CU LINK-UL TĂU DE PAYPAL.ME -->
-                <a href="https://paypal.me/taroxofficial" target="_blank" class="btn-pay btn-standard">Buy with PayPal</a>
+                <!-- ÎNLOCUIEȘTE LINK-UL DE MAI JOS CU LINK-UL TĂU DE PAYPAL -->
+                <a href="https://paypal.me/TELEUCA_LINK_AICI" target="_blank" class="btn-pay btn-gold">Buy with PayPal</a>
             </div>
 
         </div>
 
         <!-- INSTRUCȚIUNI DE REVENDICARE -->
         <div class="how-it-works">
-            <h2>How to Claim Your Premium Upgrade</h2>
+            <h2>How to Claim Your 30-Day Upgrade</h2>
             
             <div class="step">
                 <div class="step-number">1</div>
                 <div class="step-text">
                     <h4>Execute the Transaction</h4>
-                    <p>Select your desired tier above and complete the payment securely via PayPal. Ensure you keep a screenshot of the digital receipt.</p>
+                    <p>Click "Buy with PayPal" and complete the secure payment. Ensure you save a screenshot of your digital receipt.</p>
                 </div>
             </div>
             
@@ -251,7 +239,7 @@
                 <div class="step-number">2</div>
                 <div class="step-text">
                     <h4>Connect to Support Network</h4>
-                    <p>Join the official Kallisto Support HQ on Discord using the link in the navigation menu.</p>
+                    <p>Join the official Kallisto Support HQ on Discord using the link in our navigation menu.</p>
                 </div>
             </div>
             
@@ -259,7 +247,7 @@
                 <div class="step-number">3</div>
                 <div class="step-text">
                     <h4>Open a Verification Ticket</h4>
-                    <p>Provide your User ID and the payment receipt in a secure ticket. The System Architect will instantly trigger the database bypass and activate your Premium rank globally.</p>
+                    <p>Provide your User ID and the payment receipt in a secure ticket. The System Architect will instantly activate your 30-Day Premium rank globally.</p>
                 </div>
             </div>
         </div>
