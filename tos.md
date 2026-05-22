@@ -1,68 +1,113 @@
 <div align="center">
-  <h1 style="color: #ffd700;">KALLISTO - TERMS OF SERVICE</h1>
+  <h1 style="color: #ffd700;">KALLISTO - COMPREHENSIVE TERMS OF SERVICE</h1>
   <p><b>Effective Date:</b> May 22, 2026</p>
 </div>
 
 ---
 
-Welcome to **Kallisto**. These Terms of Service ("Terms") govern your access to and use of the Kallisto Discord Bot ("the Service", "the Bot") provided by the development team ("we", "us", or "our"). 
+Welcome to **Kallisto**. These Comprehensive Terms of Service ("Terms", "Agreement") constitute a legally binding agreement between you ("User", "Server Administrator", "you") and the developers of the Kallisto Discord Application ("we", "us", "our", "Development Team") governing your access to and use of the Kallisto Discord Bot ("the Service", "the Bot", "Kallisto").
 
-By inviting Kallisto to your Discord server, interacting with its commands, or utilizing any of its modules (including economy, moderation, and utility systems), you explicitly agree to comply with and be bound by these Terms. If you do not agree with these Terms, you must immediately remove the Bot from your server and cease all interactions with it.
+Please read this Agreement carefully before inviting, integrating, or utilizing the Service. By explicitly authorizing Kallisto to join your Discord Guild (Server), interacting with any of its slash commands, or utilizing its background modules (including but not limited to economy, moderation, utility, and ticketing systems), you acknowledge that you have read, understood, and agree to be bound by these Terms in their entirety. 
 
-## 1. Acceptance of Terms and Discord Policies
+If you do not agree with any provision of these Terms, you must immediately kick/remove the Bot from your server and cease all interactions with its commands.
 
-Kallisto operates exclusively on the Discord platform. By using our Service, you simultaneously agree to be bound by the official **Discord Terms of Service** and **Discord Community Guidelines**. Any violation of Discord's native policies while using Kallisto will result in an immediate blacklist from our Service.
+---
 
-## 2. Usage Restrictions and Abuse Prevention
+## 1. Definitions
 
-Kallisto provides highly advanced, simulated ecosystems (such as businesses, clans, and iterative banking). To maintain fairness and platform stability, the following actions are strictly prohibited:
+*   **"Service" or "Bot"** refers to the Kallisto Discord Bot, including all its associated APIs, commands, databases, features, and web-based dashboards or documentation.
+*   **"User"** refers to any individual Discord account that interacts with the Service in any capacity.
+*   **"Guild" or "Server"** refers to a user-created community on the Discord platform where the Service has been invited to operate.
+*   **"Virtual Assets"** refers to digital currency, experience points (XP), virtual items, clan structures, business simulations, and leveling ranks generated within the Service's database.
 
-*   **Exploitation & Bug Abuse:** Intentionally exploiting bugs, glitches, or logical flaws in the bot's code (e.g., economy duplication glitches) is strictly forbidden. Users must report discovered vulnerabilities to the development team immediately.
-*   **Automation & Macros:** The use of automated scripts, auto-typers, self-bots, or macros to farm currency, experience points (XP), or manipulate the leveling system is prohibited.
-*   **Malicious Use of Utilities:** Using Kallisto's ticket, announcement, or giveaway systems to distribute malicious links, spam, or scam material.
-*   **Server Limit Evasion:** Attempting to bypass established cooldowns, API rate limits, or configured system caps.
+## 2. Platform Compliance & Age Requirements
 
-*Violation of these restrictions will result in a permanent, global blacklist of your User ID across all servers utilizing Kallisto, alongside a complete wipe of your saved data.*
+### 2.1 Discord Terms of Service
+Kallisto operates strictly as a third-party application within the Discord ecosystem. By utilizing our Service, you simultaneously reaffirm your agreement to the official **Discord Terms of Service** and **Discord Community Guidelines**. Any breach of Discord's native policies observed through the use of our Service may result in a permanent blacklist from Kallisto, and severe violations may be reported to Discord Trust & Safety.
 
-## 3. Virtual Currency and Economy Systems
+### 2.2 Age Restrictions
+In compliance with international privacy laws (such as COPPA and the GDPR), you must be at least 13 years of age (or the minimum age of digital consent in your jurisdiction) to use this Service. If we are notified that a user under the required age is utilizing Kallisto, their data will be immediately purged, and access will be revoked.
 
-The "coins" or virtual currency utilized within Kallisto's economy modules are purely digital simulation units. 
-*   **No Real-World Value:** Kallisto currency, items, businesses, and pets hold zero real-world monetary value.
-*   **No RMT (Real Money Trading):** You may not buy, sell, or trade Kallisto virtual currency or assets for real money, cryptocurrencies, or external goods.
-*   **Economy Resets:** We reserve the right to modify, balance, or completely reset the economy systems, item values, and user balances at any time to ensure the long-term health of the Bot.
+## 3. Acceptable Use and Conduct Rules
 
-## 4. Moderation Tools and Administrative Liability
+Kallisto is engineered to provide advanced simulation and management tools. To ensure platform stability, fair play, and structural integrity, the following activities are strictly prohibited:
 
-Kallisto provides robust moderation logging and administrative tools. 
-*   **Server Responsibility:** We do not monitor how server administrators utilize these tools. The consequences of any moderation actions (kicks, bans, warnings) executed via Kallisto remain the sole responsibility of the server's administration team.
-*   **Data Accuracy:** While we strive for absolute precision in our audit logs, we cannot guarantee 100% accuracy in the event of Discord API outages or internal desyncs. 
+### 3.1 Exploitation and Automation
+*   **Bug Abuse:** Intentionally exploiting bugs, logical errors, or database desyncs (e.g., economy duplication glitches, infinite loop triggers) is strictly forbidden. Users who discover such vulnerabilities are expected to report them directly to the Development Team.
+*   **Macro and Botting Usage:** The use of automated scripts, macro recorders, self-bots, auto-typers, or unauthorized API wrappers to rapidly execute commands, farm virtual currency, or artificially inflate experience points (XP) is prohibited.
+*   **Rate Limit Evasion:** Deliberately attempting to bypass command cooldowns or Discord API rate limits through alternative accounts or network manipulation.
 
-## 5. Service Availability and Modifications
+### 3.2 Malicious Activity
+*   **Spamming:** Utilizing Kallisto's announcement, ticketing, or direct messaging features to distribute unsolicited advertisements, malicious links (phishing/malware), or harassing materials.
+*   **System Overload:** Intentionally executing intensive commands in mass synchronization with the intent to cause denial of service (DoS) or database lag.
 
-We aim to provide a stable, high-performance experience. However:
-*   **No Guarantee of Uptime:** Kallisto is provided on an "AS IS" and "AS AVAILABLE" basis. We do not guarantee uninterrupted service, and the bot may experience downtime for maintenance, updates, or unforeseen technical failures.
-*   **Feature Modification:** We reserve the right to add, alter, or remove features, commands, or entire modules at our sole discretion, with or without prior notice.
+*Failure to adhere to these conduct rules will result in immediate disciplinary action, up to and including a global, permanent blacklist of your Discord User ID and the irreversible deletion of your saved data.*
 
-## 6. Limitation of Liability
+## 4. Virtual Economy and Digital Assets
 
-To the maximum extent permitted by applicable law, the developers of Kallisto shall not be held liable for any indirect, incidental, special, consequential, or punitive damages. This includes, but is not limited to, loss of data, loss of server members, or damage to your server's reputation resulting from the use or inability to use the Bot.
+Kallisto features a highly complex, iterative economy system simulating businesses, clan warfare, and banking mechanics. You acknowledge and agree to the following conditions regarding this system:
 
-## 7. Termination of Access
+### 4.1 Ownership and License
+All Virtual Assets (including but not limited to coins, gems, inventory items, business statistics, and custom pets) are the sole property of the Kallisto Development Team. You are granted a limited, non-exclusive, revocable, and non-transferable license to interact with these assets strictly within the parameters of the Service. You do not own these digital assets.
 
-We reserve the right to suspend or terminate your access to Kallisto at any time, for any reason, including but not limited to a breach of these Terms, excessive API abuse, or behavior that harms the Bot's infrastructure or other users.
+### 4.2 No Real-World Value
+Virtual Assets have **zero** real-world monetary value. They cannot be exchanged for fiat currency, cryptocurrencies, tangible goods, or real-world services. 
 
-## 8. Changes to the Terms of Service
+### 4.3 Real Money Trading (RMT) Ban
+The buying, selling, trading, or bartering of Kallisto Virtual Assets for real money, Discord Nitro, or goods outside the Discord ecosystem is strictly prohibited. Engaging in RMT will result in an immediate global ban.
 
-We may update these Terms periodically to reflect changes in our modules, Discord's API, or legal requirements. The "Effective Date" at the top of this document will reflect the latest revision. Continued use of Kallisto after such changes implies your acceptance of the updated Terms.
+### 4.4 Economy Adjustments and Wipes
+The Development Team reserves the absolute right to monitor, modify, balance, inflate, deflate, or entirely reset/wipe the economy system, user balances, and item statistics at any time, with or without prior notice, to ensure the long-term stability and fairness of the simulation.
 
-## 9. Contact Information
+## 5. Intellectual Property Rights
 
-If you require clarification on any of these terms, or wish to report a user violating these conditions, please contact us:
+All original content, features, functionalities, source code structure, branding, logos, graphics, and embed designs associated with Kallisto remain the exclusive intellectual property of the Lead Developer (`teleucametrics`) and its licensors. 
+*   You may not copy, reverse-engineer, decompile, or attempt to extract the source code of the Service.
+*   You may not use Kallisto's branding or name to misrepresent affiliations or endorse third-party products without explicit written consent.
+
+## 6. Disclaimer of Warranties
+
+**THE SERVICE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS.** 
+
+To the maximum extent permitted by applicable law, the Kallisto Development Team expressly disclaims all warranties, whether express, implied, statutory, or otherwise, including but not limited to implied warranties of merchantability, fitness for a particular purpose, title, and non-infringement. 
+
+We do not warrant that:
+*   The Service will function uninterrupted, securely, or become available at any particular time or location.
+*   Any errors, bugs, or defects will be corrected immediately.
+*   The results of using the Service will meet your specific server requirements or expectations.
+
+## 7. Limitation of Liability
+
+**UNDER NO CIRCUMSTANCES SHALL THE DEVELOPMENT TEAM BE HELD LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES.**
+
+This limitation applies to, but is not limited to:
+*   Loss of profits, loss of data, loss of server members, or intangible losses resulting from your access to or inability to access the Service.
+*   Any conduct or content of any third party on the Service, including server-side moderation actions executed via Kallisto's moderation modules (e.g., unjust bans or kicks by server staff).
+*   Unauthorized access, use, or alteration of your transmissions or server data.
+
+## 8. Indemnification
+
+You agree to defend, indemnify, and hold harmless the Kallisto Development Team, its contractors, and licensors from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to your violation of these Terms or your use of the Service, including, but not limited to, any use of the Service's moderation or ticketing tools outside of expressly authorized parameters.
+
+## 9. Termination of Service
+
+We reserve the right, at our sole discretion, to suspend, disable, or permanently terminate your access to the Service (including removing the Bot from your Guild) at any time, for any reason, without prior notice or liability. Common reasons for termination include violations of these Terms, excessive API abuse, or activities that compromise the integrity of the Kallisto infrastructure.
+
+Upon termination, your right to use the Service will immediately cease. Sections of these Terms that by their nature should survive termination (e.g., Intellectual Property, Disclaimer of Warranties, Limitation of Liability) shall remain in full effect.
+
+## 10. Modifications to the Terms
+
+We reserve the right to modify or replace these Comprehensive Terms of Service at any given time. It is your responsibility to check this document periodically for changes. By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms.
+
+## 11. Contact and Support
+
+If you require clarification regarding any clause within this Agreement, or if you need to report severe abuse of the Service, please contact the development administration directly:
 
 *   **Lead Developer:** `teleucametrics`
 *   **Official Support Server:** [Kallisto Support HQ](https://discord.gg/Tkzhmfbdct)
+*   **Platform:** GitHub Repository & Documentation Portal
 
-<br>
+<br><br>
 <div align="center">
-  <i>Engineered for Performance. Built for Communities.</i>
+  <p><samp><i>Copyright © 2026 Kallisto Application. All rights reserved. Engineered with precision.</i></samp></p>
 </div>
