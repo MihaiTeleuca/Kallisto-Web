@@ -3,139 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kallisto - Terms of Service</title>
+    <title>Kallisto - Comprehensive Terms of Service</title>
     <style>
-        /* TEMA ÎNTUNECATĂ CORPORATIVĂ */
+        /* TEMA ÎNTUNECATĂ - CORPORATE CYBERSECURITY */
+        :root {
+            --bg-main: #0D1117;
+            --bg-secondary: #161b22;
+            --bg-tertiary: #21262d;
+            --gold-accent: #ffd700;
+            --gold-glow: rgba(255, 215, 0, 0.15);
+            --text-main: #c9d1d9;
+            --text-muted: #8b949e;
+            --border-color: #30363d;
+        }
+
         body {
-            background-color: #0D1117;
-            color: #c9d1d9;
+            background-color: var(--bg-main);
+            color: var(--text-main);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.7;
+            line-height: 1.8;
+            scroll-behavior: smooth;
         }
-        .container {
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 50px 20px;
-        }
-        a { text-decoration: none; color: #ffd700; transition: opacity 0.2s; }
-        a:hover { opacity: 0.8; }
         
-        /* MENIU NAVIGAȚIE */
+        /* SCROLLBAR CUSTOM BROWSER */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: var(--bg-main); }
+        ::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--gold-accent); }
+
+        .top-container { max-width: 1200px; margin: 0 auto; padding: 40px 20px 0 20px; }
+        a { text-decoration: none; color: var(--gold-accent); transition: all 0.2s ease-in-out; }
+        a:hover { opacity: 0.8; text-shadow: 0 0 8px var(--gold-glow); }
+
+        /* NAVIGAȚIE PRINCIPALĂ */
         .navbar {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
             font-family: "Fira Code", monospace;
             font-weight: bold;
             font-size: 14px;
-            border-bottom: 1px solid #30363d;
+            border-bottom: 1px solid var(--border-color);
             padding-bottom: 20px;
         }
-        .navbar a { color: #8b949e; margin: 0 15px; }
-        .navbar a.active { color: #ffd700; }
+        .navbar a { color: var(--text-muted); margin: 0 20px; letter-spacing: 1px; }
+        .navbar a.active { color: var(--gold-accent); text-shadow: 0 0 10px var(--gold-glow); }
         .navbar a:hover { color: #ffffff; }
 
-        /* STRUCTURĂ ȘI TEXT */
-        h1 { color: #ffd700; font-size: 32px; font-weight: 800; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
-        h2 { color: #ffffff; font-size: 22px; margin-top: 40px; border-bottom: 1px solid #21262d; padding-bottom: 8px; }
-        h3 { color: #ffd700; font-size: 18px; margin-top: 25px; }
-        p, li { color: #8b949e; font-size: 16px; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 8px; }
-        .date { color: #58a6ff; font-family: monospace; font-size: 14px; margin-bottom: 40px; }
-        
-        /* SECȚIUNI SPECIALE */
-        .highlight-box {
-            background-color: #161b22;
-            border-left: 4px solid #ffd700;
-            padding: 20px;
-            border-radius: 0 8px 8px 0;
-            margin: 30px 0;
+        /* HEADER DOCUMENT */
+        .doc-header { text-align: center; margin-bottom: 60px; }
+        .doc-header h1 { color: #ffffff; font-size: 38px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+        .doc-header .version-tag { background-color: var(--bg-secondary); border: 1px solid var(--border-color); padding: 8px 15px; border-radius: 20px; font-family: "Fira Code", monospace; font-size: 12px; color: var(--gold-accent); display: inline-block; margin-top: 10px; }
+
+        /* LAYOUT CU 2 COLOANE (SIDEBAR + CONTENT) */
+        .content-wrapper {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 80px 20px;
+            gap: 40px;
         }
-        .highlight-box p { color: #c9d1d9; margin: 0; }
+
+        /* STICKY SIDEBAR (MENIUL DIN STÂNGA) */
+        .sidebar {
+            flex: 0 0 280px;
+            position: sticky;
+            top: 40px;
+            height: calc(100vh - 80px);
+            overflow-y: auto;
+            border-right: 1px solid var(--border-color);
+            padding-right: 20px;
+        }
+        .sidebar h4 { color: #ffffff; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-bottom: 15px; }
+        .sidebar ul { list-style: none; padding: 0; margin: 0; }
+        .sidebar li { margin-bottom: 12px; }
+        .sidebar a { color: var(--text-muted); font-size: 14px; display: block; padding: 5px 10px; border-radius: 5px; border-left: 2px solid transparent; }
+        .sidebar a:hover { color: var(--gold-accent); background-color: var(--bg-secondary); border-left: 2px solid var(--gold-accent); }
+
+        /* CONȚINUTUL PRINCIPAL (DREAPTA) */
+        .main-content { flex: 1; }
+        .main-content h2 { color: var(--gold-accent); font-size: 26px; border-bottom: 1px solid var(--bg-tertiary); padding-bottom: 10px; margin-top: 60px; font-weight: 800; }
+        .main-content h2:first-child { margin-top: 0; }
+        .main-content h3 { color: #ffffff; font-size: 20px; margin-top: 30px; }
+        .main-content p, .main-content li { color: var(--text-main); font-size: 16px; margin-bottom: 15px; }
+        
+        /* CASETĂ DE SECURITATE (WARNING BOX) */
+        .alert-box {
+            background-color: rgba(255, 215, 0, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-left: 5px solid var(--gold-accent);
+            padding: 20px 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .alert-box strong { color: var(--gold-accent); font-size: 18px; display: block; margin-bottom: 8px; text-transform: uppercase; }
+        .alert-box.critical { border-left-color: #ff4444; background-color: rgba(255, 68, 68, 0.05); border-color: rgba(255, 68, 68, 0.2); }
+        .alert-box.critical strong { color: #ff4444; }
+
+        /* SECȚIUNI INTERACTIVE (ACCORDIONS) */
+        details {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            padding: 15px 20px;
+            transition: all 0.3s ease;
+        }
+        details:hover { border-color: rgba(255, 215, 0, 0.4); }
+        summary {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            outline: none;
+            display: flex;
+            align-items: center;
+        }
+        details p { margin-top: 15px; margin-bottom: 0; color: var(--text-muted); font-size: 15px; }
+
+        /* RESPONSIV PENTRU TELEFON */
+        @media (max-width: 900px) {
+            .content-wrapper { flex-direction: column; }
+            .sidebar { flex: auto; height: auto; position: static; border-right: none; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; margin-bottom: 30px; }
+        }
 
         /* FOOTER */
-        .footer {
-            margin-top: 80px;
-            padding-top: 30px;
-            border-top: 1px solid #30363d;
-            text-align: center;
-            font-size: 14px;
-            color: #484f58;
-        }
+        .footer { text-align: center; padding: 40px; border-top: 1px solid var(--border-color); color: var(--text-muted); font-family: "Fira Code", monospace; font-size: 13px; margin-top: 40px; background-color: var(--bg-main); }
     </style>
 </head>
 <body>
-    <div class="container">
-        
+
+    <div class="top-container">
         <!-- MENIU -->
         <div class="navbar">
-            <a href="index.html">FEATURES</a> • 
-            <a href="privacy.html">PRIVACY POLICY</a> • 
+            <a href="index.html">HOME</a> • 
+            <a href="privacy.html">PRIVACY PROTOCOL</a> • 
             <a href="tos.html" class="active">TERMS OF SERVICE</a> • 
             <a href="https://discord.gg/Tkzhmfbdct">SUPPORT</a>
         </div>
 
-        <!-- HEADER PORTAL LEGAL -->
-        <div style="text-align: center; margin-bottom: 50px;">
+        <!-- HEADER -->
+        <div class="doc-header">
             <h1>Terms of Service</h1>
-            <div class="date">COMPREHENSIVE LEGAL STATUTE // EFFECTIVE DATE: MAY 22, 2026</div>
+            <div class="version-tag">DOCUMENT ID: KLL-TOS-884 | EFFECTIVE: MAY 22, 2026 | BINDING CONTRACT</div>
         </div>
-
-        <p>Welcome to <b>Kallisto</b>. These Comprehensive Terms of Service constitute a legally binding contract between you, the server administrator, or individual user, and the development team of the Kallisto Discord Application (<code>teleucametrics</code>). This document strictly regulates your deployment, invocation, and general interaction with Kallisto frameworks across all associated guilds and database layers.</p>
-
-        <div class="highlight-box">
-            <p><b>Important Notice:</b> By explicitly authorizing Kallisto to enter a Discord Guild, executing any interaction commands, or utilizing its system loops, you confirm total agreement with these terms. Evasion of these rules results in a global network blacklist.</p>
-        </div>
-
-        <h2>1. Definitions & Framework Scope</h2>
-        <ul>
-            <li><b>"The Application" / "The Bot"</b> refers to the Kallisto computing package, database shards, web hooks, and script systems running inside the Discord platform.</li>
-            <li><b>"Virtual Assets"</b> defines virtual currency balances, acquired simulation inventory items, clan infrastructures, business structures, levels, and statistics securely stored inside our database.</li>
-        </ul>
-
-        <h2>2. Exploitation & Anti-Abuse Policies</h2>
-        <p>Kallisto offers highly complex structural modules including economic simulations and enterprise tier tickets. To ensure total platform integrity, the following behaviors are heavily restricted and forbidden:</p>
-        <ul>
-            <li><b>Vulnerability & Bug Exploitation:</b> Intentionally utilizing bugs, code desyncs, or logical flaws (such as currency duplication glitches or infinite reward loops) is prohibited. Discovered bugs must be documented and directed straight to the developer.</li>
-            <li><b>Automation Scripts & Macros:</b> The employment of automated macros, auto-typers, self-bots, or programmatic script loops to farm experience points (XP) or currency balances is banned.</li>
-            <li><b>Rate-Limit Bypass:</b> Creating multi-account layers to skip configured command cooldowns or bypass internal database security limitations.</li>
-        </ul>
-
-        <h2>3. Virtual Currency & Digital Assets Regulation</h2>
-        <p>All currency matrices, business properties, and level records running within the application framework are virtual simulation variables:</p>
-        <ul>
-            <li><b>Zero Real-World Value:</b> Kallisto currency and virtual assets do not possess monetary value. They cannot be converted, sold, or cashed out for fiat paper currencies or crypto assets.</li>
-            <li><b>Real Money Trading (RMT) Restriction:</b> Executing trading operations or selling virtual assets in exchange for Discord Nitro, actual currencies, or physical items is strictly forbidden. Discovered operations will incur a data wipe.</li>
-            <li><b>Economy Balance Adaptations:</b> The administration retains the full right to balance, modify, or erase currency pools, items, and structures to protect application performance.</li>
-        </ul>
-
-        <h2>4. Intellectual Property & Branding</h2>
-        <p>All core code logic layouts, embed formats, vector graphic designs, icons, logos, and custom progress bar assets associated with Kallisto are owned exclusively by the system architect (<code>teleucametrics</code>).</p>
-        <ul>
-            <li>You may not extract, reverse-engineer, decompile, or host duplicate core instances of the application.</li>
-            <li>Using the branding materials of Kallisto without clear authorization is restricted.</li>
-        </ul>
-
-        <h2>5. Complete Disclaimers & Service Limitations</h2>
-        <p><b>THE SERVICE IS SUPPLIED ON AN "AS IS" AND "AS AVAILABLE" BASELINE.</b> The development framework makes no warranties or guarantees concerning total uptime consistency, zero database desyncs, or instantaneous error fixes during API updates. Under no conditions shall the system developers be held legally responsible for any indirect damages, loss of guild members, or accidental server data drops caused during command usage.</p>
-
-        <h2>6. Termination Procedures</h2>
-        <p>The developer maintains the absolute authority to suspend your access to the application, clear your database structures, or force the bot to automatically leave specific guilds if violations of these terms or excessive rate limit spam are detected.</p>
-
-        <h2>7. Legal Operations</h2>
-        <p>For additional details regarding terms updating profiles or code security, use the central points of contact:</p>
-        <ul>
-            <li><b>Architect Account:</b> Discord Tag: <code>teleucametrics</code></li>
-            <li><b>Central Support Network:</b> <a href="https://discord.gg/Tkzhmfbdct">Join Kallisto Support HQ</a></li>
-        </ul>
-
-        <!-- FOOTER -->
-        <div class="footer">
-            © 2026 Kallisto Application Portal. All rights reserved. Engineered with precision.
-        </div>
-
     </div>
+
+    <div class="content-wrapper">
+        
+        <!-- SIDEBAR DE NAVIGAȚIE -->
+        <nav class="sidebar">
+            <h4>Index of Architecture</h4>
+            <ul>
+                <li><a href="#sec-preamble">00. Contractual Preamble</a></li>
+                <li><a href="#sec-compliance">01. Gateway Compliance</a></li>
+                <li><a href="#sec-abuse">02. Zero-Tolerance Abuse Protocols</a></li>
+                <li><a href="#sec-economy">03. Virtual Economy Architecture</a></li>
+                <li><a href="#sec-ip">04. Intellectual Property Rights</a></li>
+                <li><a href="#sec-liability">05. Disclaimer & Liability Limit</a></li>
+                <li><a href="#sec-termination">06. Infrastructure Termination</a></li>
+                <li><a href="#sec-contact">07. Legal Dispatch</a></li>
+            </ul>
+        </nav>
+
+        <!-- CONȚINUTUL GIGANTIC -->
+        <main class="main-content">
+            
+            <section id="sec-preamble">
+                <h2>00. Contractual Preamble</h2>
+                <p>These Comprehensive Terms of Service constitute a legally binding agreement between you (the "User", "Server Administrator", or "Entity") and the development architecture of the Kallisto Discord Application (<code>teleucametrics</code>). This document strictly governs your access, deployment, and utilization of Kallisto's frameworks across all Discord Guilds.</p>
+
+                <div class="alert-box">
+                    <strong>Implicit Authorization Protocol</strong>
+                    By explicitly authorizing Kallisto to enter a Discord Guild, executing any slash interaction, or utilizing its background system loops (Economy, Moderation, Tickets), you confirm absolute agreement with these terms. Ignorance of this statute does not grant immunity from network blacklists.
+                </div>
+            </section>
+
+            <section id="sec-compliance">
+                <h2>01. Gateway Compliance & Scope</h2>
+                <p>Kallisto operates strictly as a verified third-party application within the Discord ecosystem. We maintain complete synchronization with Discord's native policies.</p>
+                <ul>
+                    <li><b>Discord ToS Alignment:</b> By utilizing our Service, you simultaneously reaffirm your binding agreement to the official Discord Terms of Service and Community Guidelines.</li>
+                    <li><b>Age Restrictions:</b> Users must meet the minimum digital age of consent required by their geographic location (e.g., 13+ in the US, 16+ in the EU) to interact with our systems.</li>
+                </ul>
+            </section>
+
+            <section id="sec-abuse">
+                <h2>02. Zero-Tolerance Abuse Protocols</h2>
+                <p>The Kallisto framework provides highly complex structural modules. To ensure total platform integrity and prevent database desynchronization, the following behaviors are strictly forbidden:</p>
+                
+                <details>
+                    <summary>▶ Algorithmic Exploitation & Bug Abuse</summary>
+                    <p>Intentionally utilizing logical flaws, API lag, or database desyncs (e.g., executing currency duplication glitches or triggering infinite reward loops) is an absolute violation. Discovered vulnerabilities must be documented and directed straight to the developer immediately. Weaponizing bugs will result in an automated global ban.</p>
+                </details>
+
+                <details>
+                    <summary>▶ Macro Deployment & Automation Systems</summary>
+                    <p>The employment of automated macros, auto-typers, self-bots, or programmatic script loops to artificially inflate Experience Points (XP), farm virtual currency, or spam API endpoints is strictly banned. Kallisto utilizes background anti-cheat telemetry to detect irregular execution patterns.</p>
+                </details>
+
+                <details>
+                    <summary>▶ Rate-Limit & Cooldown Evasion</summary>
+                    <p>Deploying multi-account clusters (alt-accounts) to skip configured command cooldowns, bypass bank capacity limits, or funnel wealth into a primary account is forbidden and will trigger a network-wide asset wipe.</p>
+                </details>
+            </section>
+
+            <section id="sec-economy">
+                <h2>03. Virtual Economy Architecture & RMT</h2>
+                <p>All currency matrices, business properties, clan capacities, and level records running within the Kallisto framework are purely virtual simulation variables.</p>
+
+                <div class="alert-box critical">
+                    <strong>Real Money Trading (RMT) Restriction</strong>
+                    Kallisto Virtual Assets have ZERO real-world monetary value. Selling, trading, or buying Kallisto coins, items, or businesses in exchange for fiat currencies (USD, EUR), cryptocurrencies, Discord Nitro, or physical items is strictly illegal within our framework. Discovered operations will incur an instant architectural data wipe.
+                </div>
+
+                <ul>
+                    <li><b>No Financial Returns:</b> Virtual assets cannot be converted, sold, or cashed out under any circumstances.</li>
+                    <li><b>Economy Adjustments:</b> The administration retains the absolute right to mathematically balance, modify, inflate, deflate, or completely erase currency pools to protect the global simulation's stability.</li>
+                </ul>
+            </section>
+
+            <section id="sec-ip">
+                <h2>04. Intellectual Property Rights</h2>
+                <p>The core logic structures, embedded UI designs, custom vector graphics, progress bar assets, and underlying code loops associated with Kallisto are the exclusive intellectual property of the System Architect (<code>teleucametrics</code>).</p>
+                <p>Users and administrators are strictly prohibited from attempting to reverse-engineer, decompile, extract, or host duplicate core instances of the application. The Kallisto brand name and logos may not be used to endorse third-party projects without explicit cryptographic authorization.</p>
+            </section>
+
+            <section id="sec-liability">
+                <h2>05. Disclaimer & Limitation of Liability</h2>
+                <p>Our systems are built for maximum uptime, but we operate alongside the dynamic Discord API.</p>
+                <p><b>THE SERVICE IS SUPPLIED ON AN "AS IS" AND "AS AVAILABLE" BASELINE.</b></p>
+                <p>To the maximum extent permitted by law, the Kallisto development team disclaims all warranties. We do not guarantee zero database desyncs or instantaneous error resolution during major Discord Gateway outages. Under no conditions shall the developers be held legally or financially responsible for indirect damages, loss of guild members, loss of virtual assets, or damages caused by moderation tools utilized by server administrators.</p>
+            </section>
+
+            <section id="sec-termination">
+                <h2>06. Infrastructure Termination Rights</h2>
+                <p>The Developer maintains the absolute authority to suspend your access to the application, execute a targeted database wipe of your assets, or force the bot to algorithmically leave specific guilds at any time, with or without notice.</p>
+                <p>Primary triggers for termination include violation of these Terms of Service, excessive API spam leading to rate limits, or behavior that compromises the structural security of the Kallisto network.</p>
+            </section>
+
+            <section id="sec-contact">
+                <h2>07. Legal Dispatch</h2>
+                <p>This Contract is a living architecture and will receive dynamic patches as the Discord API evolves. By continuing to use Kallisto following any modifications, you accept the revised statutes.</p>
+                <ul>
+                    <li><b>System Architect & Legal Entity:</b> <code>teleucametrics</code></li>
+                    <li><b>Secure Communications Hub:</b> <a href="https://discord.gg/Tkzhmfbdct">Initialize Connection to Support HQ</a></li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- FOOTER SUPER-PREMIUM -->
+    <div class="footer">
+        <div>KALLISTO SECURE INFRASTRUCTURE // PROTOCOL VERSION 2.0.4</div>
+        <div style="margin-top: 10px; color: #484f58;">Copyright © 2026. Engineered with absolute precision by Mihai Teleuca. All rights reserved.</div>
+    </div>
+
 </body>
 </html>
