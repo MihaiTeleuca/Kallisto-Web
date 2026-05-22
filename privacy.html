@@ -3,152 +3,316 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kallisto - Privacy Policy</title>
+    <title>Kallisto - Global Privacy & Security Architecture</title>
     <style>
-        /* TEMA ÎNTUNECATĂ CORPORATIVĂ */
+        /* TEMA ÎNTUNECATĂ - CORPORATE CYBERSECURITY */
+        :root {
+            --bg-main: #0D1117;
+            --bg-secondary: #161b22;
+            --bg-tertiary: #21262d;
+            --gold-accent: #ffd700;
+            --gold-glow: rgba(255, 215, 0, 0.15);
+            --text-main: #c9d1d9;
+            --text-muted: #8b949e;
+            --border-color: #30363d;
+        }
+
         body {
-            background-color: #0D1117;
-            color: #c9d1d9;
+            background-color: var(--bg-main);
+            color: var(--text-main);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.7;
+            line-height: 1.8;
+            scroll-behavior: smooth; /* Scroll fin pentru linkurile din meniu */
         }
-        .container {
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 50px 20px;
-        }
-        a { text-decoration: none; color: #ffd700; transition: opacity 0.2s; }
-        a:hover { opacity: 0.8; }
         
-        /* MENIU NAVIGAȚIE */
+        /* SCROLLBAR CUSTOM BROWSER */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: var(--bg-main); }
+        ::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--gold-accent); }
+
+        .top-container { max-width: 1200px; margin: 0 auto; padding: 40px 20px 0 20px; }
+        a { text-decoration: none; color: var(--gold-accent); transition: all 0.2s ease-in-out; }
+        a:hover { opacity: 0.8; text-shadow: 0 0 8px var(--gold-glow); }
+
+        /* NAVIGAȚIE PRINCIPALĂ */
         .navbar {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
             font-family: "Fira Code", monospace;
             font-weight: bold;
             font-size: 14px;
-            border-bottom: 1px solid #30363d;
+            border-bottom: 1px solid var(--border-color);
             padding-bottom: 20px;
         }
-        .navbar a { color: #8b949e; margin: 0 15px; }
-        .navbar a.active { color: #ffd700; }
+        .navbar a { color: var(--text-muted); margin: 0 20px; letter-spacing: 1px; }
+        .navbar a.active { color: var(--gold-accent); text-shadow: 0 0 10px var(--gold-glow); }
         .navbar a:hover { color: #ffffff; }
 
-        /* STRUCTURĂ ȘI TEXT */
-        h1 { color: #ffd700; font-size: 32px; font-weight: 800; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
-        h2 { color: #ffffff; font-size: 22px; margin-top: 40px; border-bottom: 1px solid #21262d; padding-bottom: 8px; }
-        h3 { color: #ffd700; font-size: 18px; margin-top: 25px; }
-        p, li { color: #8b949e; font-size: 16px; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 8px; }
-        .date { color: #58a6ff; font-family: monospace; font-size: 14px; margin-bottom: 40px; }
-        
-        /* SECȚIUNI SPECIALE (NOTĂ/CARD) */
-        .highlight-box {
-            background-color: #161b22;
-            border-left: 4px solid #ffd700;
-            padding: 20px;
-            border-radius: 0 8px 8px 0;
-            margin: 30px 0;
+        /* HEADER DOCUMENT */
+        .doc-header { text-align: center; margin-bottom: 60px; }
+        .doc-header h1 { color: #ffffff; font-size: 38px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+        .doc-header .version-tag { background-color: var(--bg-secondary); border: 1px solid var(--border-color); padding: 8px 15px; border-radius: 20px; font-family: "Fira Code", monospace; font-size: 12px; color: var(--gold-accent); display: inline-block; margin-top: 10px; }
+
+        /* LAYOUT CU 2 COLOANE (SIDEBAR + CONTENT) */
+        .content-wrapper {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 80px 20px;
+            gap: 40px;
         }
-        .highlight-box p { color: #c9d1d9; margin: 0; }
+
+        /* STICKY SIDEBAR (MENIUL DIN STÂNGA) */
+        .sidebar {
+            flex: 0 0 280px;
+            position: sticky;
+            top: 40px;
+            height: calc(100vh - 80px);
+            overflow-y: auto;
+            border-right: 1px solid var(--border-color);
+            padding-right: 20px;
+        }
+        .sidebar h4 { color: #ffffff; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-bottom: 15px; }
+        .sidebar ul { list-style: none; padding: 0; margin: 0; }
+        .sidebar li { margin-bottom: 12px; }
+        .sidebar a { color: var(--text-muted); font-size: 14px; display: block; padding: 5px 10px; border-radius: 5px; border-left: 2px solid transparent; }
+        .sidebar a:hover { color: var(--gold-accent); background-color: var(--bg-secondary); border-left: 2px solid var(--gold-accent); }
+
+        /* CONȚINUTUL PRINCIPAL (DREAPTA) */
+        .main-content { flex: 1; }
+        .main-content h2 { color: var(--gold-accent); font-size: 26px; border-bottom: 1px solid var(--bg-tertiary); padding-bottom: 10px; margin-top: 60px; font-weight: 800; }
+        .main-content h2:first-child { margin-top: 0; }
+        .main-content h3 { color: #ffffff; font-size: 20px; margin-top: 30px; }
+        .main-content p, .main-content li { color: var(--text-main); font-size: 16px; margin-bottom: 15px; }
+        
+        /* CASETĂ DE SECURITATE (WARNING BOX) */
+        .alert-box {
+            background-color: rgba(255, 215, 0, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-left: 5px solid var(--gold-accent);
+            padding: 20px 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .alert-box strong { color: var(--gold-accent); font-size: 18px; display: block; margin-bottom: 8px; text-transform: uppercase; }
+
+        /* TABEL DE DATE SECRETE (DATA MATRIX) */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 14px;
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+        .data-table th, .data-table td { padding: 15px; text-align: left; border-bottom: 1px solid var(--bg-tertiary); }
+        .data-table th { background-color: var(--bg-tertiary); color: #ffffff; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 12px; }
+        .data-table tr:last-child td { border-bottom: none; }
+        .data-table code { background-color: var(--bg-main); padding: 4px 8px; border-radius: 4px; color: var(--gold-accent); font-family: "Fira Code", monospace; font-size: 13px; border: 1px solid var(--border-color); }
+
+        /* SECȚIUNI INTERACTIVE (ACCORDIONS) */
+        details {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            padding: 15px 20px;
+            transition: all 0.3s ease;
+        }
+        details:hover { border-color: rgba(255, 215, 0, 0.4); }
+        summary {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            outline: none;
+            display: flex;
+            align-items: center;
+        }
+        details p { margin-top: 15px; margin-bottom: 0; color: var(--text-muted); font-size: 15px; }
+
+        /* RESPONSIV PENTRU TELEFON */
+        @media (max-width: 900px) {
+            .content-wrapper { flex-direction: column; }
+            .sidebar { flex: auto; height: auto; position: static; border-right: none; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; margin-bottom: 30px; }
+            .data-table { display: block; overflow-x: auto; }
+        }
 
         /* FOOTER */
-        .footer {
-            margin-top: 80px;
-            padding-top: 30px;
-            border-top: 1px solid #30363d;
-            text-align: center;
-            font-size: 14px;
-            color: #484f58;
-        }
+        .footer { text-align: center; padding: 40px; border-top: 1px solid var(--border-color); color: var(--text-muted); font-family: "Fira Code", monospace; font-size: 13px; margin-top: 40px; background-color: var(--bg-main); }
     </style>
 </head>
 <body>
-    <div class="container">
-        
+
+    <div class="top-container">
         <!-- MENIU -->
         <div class="navbar">
-            <a href="index.html">FEATURES</a> • 
-            <a href="privacy.html" class="active">PRIVACY POLICY</a> • 
+            <a href="index.html">HOME</a> • 
+            <a href="privacy.html" class="active">PRIVACY PROTOCOL</a> • 
             <a href="tos.html">TERMS OF SERVICE</a> • 
             <a href="https://discord.gg/Tkzhmfbdct">SUPPORT</a>
         </div>
 
-        <!-- HEADER PORTAL LEGAL -->
-        <div style="text-align: center; margin-bottom: 50px;">
-            <h1>Privacy Policy</h1>
-            <div class="date">GLOBAL DATA PROTECTION STATUTE // LAST UPDATED: MAY 22, 2026</div>
+        <!-- HEADER -->
+        <div class="doc-header">
+            <h1>Global Privacy Architecture</h1>
+            <div class="version-tag">DOCUMENT ID: KLL-SEC-992 | EFFECTIVE: MAY 22, 2026 | COMPLIANCE: GDPR, CCPA</div>
         </div>
-
-        <p>Welcome to the official Privacy Policy for <b>Kallisto</b>. As an advanced, high-performance, all-in-one Discord application specializing in complex financial/economy simulations, structured community moderation, dynamic ticketing frameworks, and utility architectures, we maintain an uncompromising commitment to user data security and privacy. This comprehensive document details the absolute scope of data Kallisto processing pipelines access, store, and secure across any Discord Guild (Server) where the application is deployed.</p>
-
-        <div class="highlight-box">
-            <p><b>Regulatory Notice:</b> Kallisto operates strictly within compliance thresholds dictated by the Discord Developer Terms, international data protection standards (GDPR/CCPA), and rigorous internal security protocols. We do not sell, leak, or abuse user information.</p>
-        </div>
-
-        <h2>1. Algorithmic Data Ingestion & Collection</h2>
-        <p>To provide execution accuracy across multiple systems simultaneously, Kallisto ingests two primary layers of telemetry provided securely via the Discord Gateway API API endpoints.</p>
-        
-        <h3>A. Automated Gateway Telemetry</h3>
-        <p>Whenever a user executes an interaction or a slash command, the bot temporarily handles standard routing infrastructure metadata:</p>
-        <ul>
-            <li><b>User Identification Parameters:</b> Explicit Discord User IDs, localized display names, account handles, and cryptographic avatar hashes.</li>
-            <li><b>Guild Infrastructure Mapping:</b> Discord Guild (Server) IDs, server-wide structural roles assigned to the user, channel IDs, and localized permissions configurations.</li>
-        </ul>
-
-        <h3>B. Feature-Specific Persistent Database Records</h3>
-        <p>Depending on which modular frameworks server administrators activate, Kallisto securely writes persistent records to our production datastores:</p>
-        <ul>
-            <li><b>Advanced Financial Simulation Architecture:</b> Records tracking total wallet capital, isolated institutional banking balances, comprehensive logging of cross-user transactions, business ownership telemetry, clan/organization associations, and active asset multipliers.</li>
-            <li><b>Enterprise Moderation Logs:</b> Historical entries containing active warning numbers, explicit server infraction reason logs, moderator-to-user action mapping, and server-wide enforcement records (mutes, bans, kicks).</li>
-            <li><b>Automated Support Systems (Tickets):</b> Text data, diagnostic transcripts, and file references uploaded inside active customer support ticket infrastructure channels are processed to compile secure archival HTML outputs for staff audit teams.</li>
-            <li><b>Community Leveling Modules:</b> Micro-tracking of absolute text message counts and mathematically calculated Experience Points (XP) balances bound to specific server layers.</li>
-        </ul>
-
-        <h2>2. Detailed Data Utilization Framework</h2>
-        <p>Data processing performed by Kallisto is strictly programmatic. It is never monitored manually unless diagnostic evaluation is required, and is utilized exclusively for:</p>
-        <ul>
-            <li><b>State Persistence:</b> Ensuring that progression elements (such as expanding business assets, bank account tier upgrades, and server leveling records) stay perfectly synced across global execution instances.</li>
-            <li><b>Anti-Exploit Monitoring:</b> Evaluating command invocation frequency to prevent programmatic macro manipulation, illegal duplication exploits within financial loops, and rate-limit bypasses.</li>
-            <li><b>Guild Security Auditing:</b> Enabling guild administrators to query historical moderation actions and export transcript tracking securely.</li>
-        </ul>
-
-        <h2>3. Data Infrastructure & Global Retention Policies</h2>
-        <p>Kallisto infrastructure leverages industrial-grade encryption standards to secure database entries against data breaches or external vulnerabilities.</p>
-        <ul>
-            <li><b>Storage Security:</b> Persistent matrices are maintained within an environment protected by firewalls and access controls. Unauthenticated network access to database clusters is hard-blocked.</li>
-            <li><b>Retention Schedules:</b> Statistical financial logs, assets, and level progress remain stored indefinitely to guarantee progression stability, unless a complete wipe occurs. Temporary command cache models are automatically pruned every 15 minutes.</li>
-        </ul>
-
-        <h2>4. Third-Party Restrictions & Information Isolation</h2>
-        <p>We maintain a strict boundary separating our stored datasets from external entities:</p>
-        <ul>
-            <li><b>Zero Commercialization:</b> We do not sell, lease, monetize, or distribute data layers to marketing platforms, analytics companies, or external brokers under any circumstances.</li>
-            <li><b>Cross-Guild Boundary Security:</b> Stored data associated with a specific server (such as custom tickets or moderation reasoning) cannot be queried or accessed by users or administrators from another server.</li>
-        </ul>
-
-        <h2>5. User Sovereignty & Data Rights</h2>
-        <p>In accordance with global standards, users possess complete control over their recorded identities inside our infrastructure.</p>
-        <ul>
-            <li><b>Right to Erasure (The Right to be Forgotten):</b> Any user has the right to initiate an absolute wipe of all historical tracking associated with their Discord account ID.</li>
-            <li><b>Execution of Rights:</b> To completely delete your data, you can connect directly to the official support infrastructure or message the application lead developer (<code>teleucametrics</code>). Processing and purging of database lines are executed within 48-72 hours. *Warning: Wiping records completely destroys all assets, cash, business ranks, and level achievements across all servers permanently.*</li>
-        </ul>
-
-        <h2>6. Legal & Operational Contacts</h2>
-        <p>For inquiries regarding infrastructure cryptography, GDPR inquiries, or standard server support, contact our central operations terminal:</p>
-        <ul>
-            <li><b>Lead System Architect:</b> Discord Tag: <code>teleucametrics</code></li>
-            <li><b>Operational Support Hub:</b> <a href="https://discord.gg/Tkzhmfbdct">Join Kallisto Support HQ</a></li>
-        </ul>
-
-        <!-- FOOTER -->
-        <div class="footer">
-            © 2026 Kallisto Application Portal. All rights reserved. Engineered with precision.
-        </div>
-
     </div>
+
+    <div class="content-wrapper">
+        
+        <!-- SIDEBAR DE NAVIGAȚIE -->
+        <nav class="sidebar">
+            <h4>Index of Architecture</h4>
+            <ul>
+                <li><a href="#sec-preamble">00. Executive Preamble</a></li>
+                <li><a href="#sec-ingestion">01. Algorithmic Data Ingestion</a></li>
+                <li><a href="#sec-matrix">02. The Data Processing Matrix</a></li>
+                <li><a href="#sec-encryption">03. Cryptographic Storage & TTL</a></li>
+                <li><a href="#sec-isolation">04. Infrastructure Isolation</a></li>
+                <li><a href="#sec-sovereignty">05. Digital Sovereignty (GDPR)</a></li>
+                <li><a href="#sec-breach">06. Incident & Breach Protocols</a></li>
+                <li><a href="#sec-contact">07. Legal Dispatch</a></li>
+            </ul>
+        </nav>
+
+        <!-- CONȚINUTUL GIGANTIC -->
+        <main class="main-content">
+            
+            <section id="sec-preamble">
+                <h2>00. Executive Preamble</h2>
+                <p>Welcome to the <b>Kallisto Master Privacy Protocol</b>. Kallisto operates far beyond the scope of traditional Discord applications; it is a highly advanced ecosystem utilizing dynamic database clustering, asynchronous process execution, and micro-transaction simulation algorithms.</p>
+                <p>Because our framework processes enterprise-grade ticketing systems, global economy simulations, and absolute moderation logs, our commitment to <b>Data Obfuscation</b>, <b>User Anonymity</b>, and <b>Cryptographic Security</b> is absolute. This document outlines the extreme measures deployed by our infrastructure to guarantee compliance with the highest international standards.</p>
+
+                <div class="alert-box">
+                    <strong>Zero-Knowledge Content Promise</strong>
+                    Kallisto employs a strict "Zero-Knowledge" architecture regarding standard text communication. The Bot <b>does not</b> log, read, or process raw message content within your server unless a command is explicitly invoked or a ticket channel is actively archiving. We do not listen to your conversations.
+                </div>
+            </section>
+
+            <section id="sec-ingestion">
+                <h2>01. Algorithmic Data Ingestion</h2>
+                <p>To ensure sub-millisecond execution accuracy across thousands of synchronized Guilds, Kallisto ingests strictly necessary telemetry directly from the authenticated Discord API Gateway. We categorize this ingestion into two core vectors:</p>
+                
+                <h3>A. Ephemeral Routing Telemetry (Cache)</h3>
+                <p>During the execution of a Slash Command (<code>/interaction</code>) or a button press, Kallisto temporarily holds routing data in active memory (RAM) to deliver the payload. This data is purged instantly after the interaction concludes.</p>
+                <ul>
+                    <li><b>64-bit Snowflake Identifiers:</b> The absolute mathematical ID assigned to your Discord profile.</li>
+                    <li><b>Cryptographic Hashes:</b> Avatar and Banner hashes used exclusively to render embed interfaces.</li>
+                    <li><b>Role Bitfields:</b> Binary data confirming your permission level (e.g., Administrator vs. User) to block unauthorized execution of moderation modules.</li>
+                </ul>
+
+                <h3>B. Persistent Architecture Modules</h3>
+                <p>When Server Administrators deploy our persistent modules (Economy, Tickets, Leveling), specific metrics are securely written to our encrypted database clusters to maintain state across reboots.</p>
+            </section>
+
+            <section id="sec-matrix">
+                <h2>02. The Data Processing Matrix</h2>
+                <p>Transparency is our absolute standard. Below is the exact matrix mapping which data points are securely stored, what feature requires them, and the cryptographic necessity behind it.</p>
+
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Data Point</th>
+                            <th>Target Module</th>
+                            <th>Algorithmic Necessity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>user_id</code> / <code>guild_id</code></td>
+                            <td>Core Infrastructure</td>
+                            <td>Primary and Foreign keys utilized to uniquely map virtual assets to the correct owner inside the correct server.</td>
+                        </tr>
+                        <tr>
+                            <td><code>economy_wallet</code></td>
+                            <td>Advanced Economy</td>
+                            <td>Stores floating-point numerical values representing business earnings, clan bank capacities, and item IDs.</td>
+                        </tr>
+                        <tr>
+                            <td><code>audit_reason_string</code></td>
+                            <td>Absolute Moderation</td>
+                            <td>Text input provided by moderators when executing Bans/Mutes, stored strictly for historical audit compliance.</td>
+                        </tr>
+                        <tr>
+                            <td><code>html_transcript_buffer</code></td>
+                            <td>Dynamic Tickets</td>
+                            <td>Raw text logged <b>only</b> inside explicit Support Channels to generate secure, downloadable HTML files for staff review.</td>
+                        </tr>
+                        <tr>
+                            <td><code>message_count_int</code></td>
+                            <td>Leveling Framework</td>
+                            <td>An integer tracking the volume of activity to mathematically calculate the next rank and progress bar percentage.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="sec-encryption">
+                <h2>03. Cryptographic Storage & Time-To-Live (TTL)</h2>
+                <p>Data at rest and data in transit are handled using military-grade enterprise standards. We refuse to compromise on structural security.</p>
+
+                <details>
+                    <summary>▶ Inspect Cryptographic Standards (AES-256 & TLS 1.3)</summary>
+                    <p>All communication between the Discord API and the Kallisto central servers is encrypted using <b>TLS 1.3</b>. Persistent database clusters are encrypted at rest using the <b>AES-256</b> encryption algorithm. Direct access to the database layer is blocked via strict IP whitelisting and firewall rules, rendering unauthorized external queries impossible.</p>
+                </details>
+
+                <details>
+                    <summary>▶ Inspect Time-To-Live (TTL) & Cache Pruning</summary>
+                    <p>Kallisto operates an aggressive pruning algorithm. Ephemeral memory states (used for paginating embeds or tracking short-term cooldowns) are aggressively flushed every 15 minutes. Persistent data (Economy/Levels) relies on user sovereignty—meaning it stays safe until you explicitly command its deletion.</p>
+                </details>
+            </section>
+
+            <section id="sec-isolation">
+                <h2>04. Infrastructure Isolation & Third Parties</h2>
+                <p>The Kallisto architecture operates in a strictly isolated vacuum within the Discord ecosystem.</p>
+                <ul>
+                    <li><b>Zero Corporate Monetization:</b> Your data is not a commodity. We do not sell, lease, transfer, or exchange our database shards with marketing conglomerates, data brokers, or advertising networks.</li>
+                    <li><b>Cross-Guild Isolation:</b> Data generated in Server A is mathematically isolated from Server B. A server administrator from one community cannot query, extract, or view the moderation logs, ticket histories, or exact balances of a user in a different community.</li>
+                </ul>
+            </section>
+
+            <section id="sec-sovereignty">
+                <h2>05. Digital Sovereignty (GDPR & CCPA Compliance)</h2>
+                <p>Regardless of your geographic location, we grant all users the maximum rights mandated by the European Union's General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA).</p>
+
+                <div class="alert-box">
+                    <strong>Article 17: The Right to Erasure</strong>
+                    You maintain absolute sovereignty over your digital footprint. At any given moment, you may trigger the "Right to be Forgotten" protocol. Submitting a verified request will initiate a cascade deletion, mathematically wiping your User ID, economy balances, items, and levels from all Kallisto database clusters globally. <i>Note: This process is irreversible.</i>
+                </div>
+
+                <p>To execute a data request or a complete architectural purge, contact the lead developer natively via Discord or open a high-priority ticket in the Kallisto Support HQ. Purges are verified and executed within 72 hours.</p>
+            </section>
+
+            <section id="sec-breach">
+                <h2>06. Incident & Breach Protocols</h2>
+                <p>In the highly unlikely event of a catastrophic infrastructure breach or unauthorized database access, Kallisto maintains an automated response protocol. The affected database shards will be instantly isolated from the main network. Furthermore, a global broadcast will be issued to all registered Server Owners within 24 hours of breach verification, detailing the extent of the compromised vector.</p>
+            </section>
+
+            <section id="sec-contact">
+                <h2>07. Legal Dispatch & Communications</h2>
+                <p>This document is a living architecture and may receive dynamic patches as the Discord API evolves or international laws shift. For legal inquiries, GDPR execution requests, or infrastructure questions, dispatch your communications to our secure channels:</p>
+                <ul>
+                    <li><b>Lead System Architect:</b> <code>teleucametrics</code></li>
+                    <li><b>Secure Communications Hub:</b> <a href="https://discord.gg/Tkzhmfbdct">Initialize Connection to Support HQ</a></li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- FOOTER SUPER-PREMIUM -->
+    <div class="footer">
+        <div>KALLISTO SECURE INFRASTRUCTURE // PROTOCOL VERSION 2.0.4</div>
+        <div style="margin-top: 10px; color: #484f58;">Copyright © 2026. Engineered with absolute precision by Mihai Teleuca. All rights reserved.</div>
+    </div>
+
 </body>
 </html>
